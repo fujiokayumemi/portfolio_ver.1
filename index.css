@@ -178,6 +178,10 @@ h3,h4,h5{
 
 @media screen and (max-width:599px) {
 
+    #header{
+        height: 100vh;
+    }
+
     .logo_header_mv{
         width: 50%;
     }
