@@ -1,0 +1,586 @@
+@charset "UTF-8";
+
+/* ------- 共通 ------- */
+
+html{
+        font-size: 20px;
+}
+
+body{
+    margin: 0;
+    color: #96652B;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+}
+
+div{
+    box-sizing: border-box;
+}
+
+ul,li{
+    box-sizing: border-box;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    margin: 0;
+    padding: 0;
+}
+
+h2{
+    display: inline-block;
+    margin: 0;
+    padding: 0 15px;
+    font-size: 4rem;
+    line-height: 1em;
+    background: linear-gradient( transparent 70% , rgba(198,54,107,0.37) 30%);
+
+}
+
+h3,h4,h5{
+    margin: 0;
+}
+
+.section{
+    width: 960px;
+    margin: 115px auto;
+}
+
+
+/* タブレット */
+
+@media screen and (max-width:1024px) {
+
+    h2{
+        font-size: 2rem;
+    }
+
+    .section{
+        width: 600px;
+        margin: 100px auto;
+    }
+
+}
+
+/* スマホ */
+
+@media screen and (max-width:599px) {
+    
+    .section{
+        width: auto;
+        padding: 0 20px;
+    }
+
+}
+
+
+/*------- header -------*/
+
+#header{
+    position: relative;
+    width: 100%;
+    height: 75vh;
+    background-image: url(./img/img_header_mv.JPG);
+    background-size: cover;
+    background-position: center;
+}
+
+#header::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255,0.4);
+}
+
+.img_header_mv{
+    height: 100%;
+    width: auto;
+}
+
+.blackcover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.2);
+}
+
+.header_bar{
+    width: 100%;
+    height: 70px;
+}
+
+.logo_headerBar_wrap{
+    width: 75px;
+    height: 100%;
+    float: left;
+    margin-left: 30px;
+    line-height: 2;
+}
+
+.logo_headerBar{
+    width: 100%;
+    height: auto;
+    vertical-align: text-top;
+}
+
+.nav_header{
+    height: 100%;
+}
+
+.nav_header ul{
+    display: flex;
+    height: 100%;
+    margin-left: auto;
+    margin-right: 40px;
+    justify-content: flex-end;
+}
+
+.header_nav_item{
+    display: flex;
+    align-items: center;
+}
+
+.header_nav_item:nth-of-type(2) {
+    margin: 0 80px;
+}
+
+.header_nav_item a{
+    color: #fff;
+    text-decoration: none;
+}
+
+
+.logo_header_mv{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}   
+
+
+@media screen and (max-width:1024px) {
+
+    .logo_header_mv{
+        width: 30%;
+    }
+
+    .header_nav_item{
+        font-size: 0.8rem;
+    }
+
+}
+
+@media screen and (max-width:599px) {
+
+    .logo_header_mv{
+        width: 50%;
+    }
+
+    .nav_header ul{
+        display: block;
+        margin-right: 20px;
+    }
+
+    .header_nav_item{
+        justify-content: flex-end;
+    }
+
+    .header_nav_item:nth-child(2){
+        margin: 0;
+    } 
+
+    .logo_headerBar_wrap{
+        margin-left: 10px;
+    }
+
+}
+
+/* ------- section about ------- */
+
+.section_about{
+    margin-top: 115px;
+}
+
+.about_article{
+    width: 50%;
+    float: left;
+}
+
+.about_article p{
+    width: 96%;
+    margin: 40px auto 0;
+}
+
+.img_about_wrap{
+    position: relative;
+    width: 50%;
+    float: left;
+}
+
+.img_about{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.part_skil{
+    clear: both;
+    padding: 80px 5px 0;
+}
+
+.skil_ul{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.skil_item{
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    background-color: #F5F5F5;
+    border-radius: 20px;
+}
+
+.txt_skil{
+    margin-top: 20px;
+    text-align: left;
+}
+
+.icon_skil{
+    width: 100px;
+    height: 100px;
+}
+
+.name_skil{
+    font-size: 1.8rem;
+}
+
+.part_moreinfo{
+    margin-top: 75px;
+    border-bottom: 1px solid #96652B;
+    padding-bottom: 25px;
+}
+
+.part_moreinfo p{
+    margin-top: 10px;
+}
+
+.title_moreinfo{
+    font-size: 1.2em;
+}
+
+.title_moreinfo span::after{
+    content: "";
+    display: inline-block;
+    float: right;
+    width: 74%;
+    height: 1rem;
+    border-bottom: 1px solid #96652B;
+}
+
+.txt_moreinfo:first-of-type{
+    margin-top: 20px;
+}
+
+.title_favorite{
+    font-size: 0.9rem;
+    margin-top: 20px;
+}
+
+.txt_favorite{
+    font-size: 0.8rem;
+}
+
+@media screen and (max-width:1024px) {
+    
+    .about_article {
+        width: 61%;
+    }
+
+    .about_article p{
+        width: 100%;
+        font-size: 0.8rem;
+    }
+
+    .img_about_wrap{
+        float: right;
+        width: 39%;
+        margin-top: 70px
+    }
+
+    .skil_ul{
+        justify-content: space-between;
+    }
+
+    .skil_item{
+        width: 32.5%;
+        padding: 20px 10px;
+    }
+    
+    .icon_skil{
+        width: 60px;
+        height: 60px;
+    }
+
+    .name_skil{
+        font-size: 1.3rem;
+    }
+
+    .txt_skil{
+        font-size: 0.8rem;
+    }
+
+    .title_moreinfo{
+        font-size: 1rem;
+    }
+
+    .title_moreinfo span::after{
+        width: 65%;
+    }
+
+    .txt_moreinfo,.title_favorite{
+        font-size: 0.7rem;
+    }
+
+    .txt_favorite{
+        font-size: 0.6rem;
+    }
+
+    .title_favorite{
+        margin-top: 10px;
+    }
+
+}
+
+@media screen and (max-width:599px) {
+
+    .about_article{
+        float: none;
+        width: auto;
+    }
+    
+    .about_article p{
+        font-size: 0.8em;
+        overflow-wrap:break-word
+    }
+
+    .about_article br{
+        display: none;
+    }
+
+    .img_about_wrap{
+        width: 100%;
+    }
+
+    .skil_ul{
+        display: block;
+    }
+
+    .skil_item{
+        width: 100%;
+    }
+
+    .skil_item:nth-child(2){
+        margin: 10px auto;
+    }
+
+    .txt_skil{
+        font-size: 0.7em;
+    }
+
+    .title_moreinfo span::after{
+        width: 25%;
+    }
+
+}
+
+/* ------- section works ------- */
+
+.section_works h2{
+    float: right;
+}
+
+.btn_flex{
+    clear: both;
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 60px;
+    justify-content: space-between;
+}
+
+.section_works h3{
+    width: 164px;
+    padding: 10px 60px ;
+    text-align: center;
+    font-size: 1.4rem;
+    border-left: 1px solid #898887;
+}
+
+.section_works h3:hover{
+    cursor: pointer;
+}
+
+
+.section_works h3:last-child{
+    border-right: 1px solid #898887;
+}
+
+.works_container{
+    display: flex;
+    width: 90%;
+    margin: 80px auto 0;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 60px 0;    
+}
+
+.works_item{
+    width: 225px;
+    height: 225px;
+    border: 1px #96652B solid;
+    overflow: hidden;
+    background-color: #96652B;
+}
+
+.works_item img{
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+}
+
+@media screen and (max-width:1024px) {
+    
+    .section_works h3{
+        font-size: 1rem;
+        line-height: 1rem;
+    }
+
+    .works_item{
+        width: 160px;
+        height: 160px;
+    }
+
+}
+
+@media screen and (max-width:599px){
+
+    .section_works h3{
+        width: 60px;
+        padding-left: 5% ;
+        padding-right: 5% ;
+    }
+
+    .btn_flex{
+        width: auto;
+        justify-content: center;
+    }
+
+    .works_container{
+        gap: 90px 0;
+    }
+
+    .works_item{
+        width: 100%;
+        height: 81.5vw;
+    }
+
+}
+
+
+
+/* ------- section contact------- */
+
+.section_contact {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.section_contact p{
+    margin-top: 50px;
+}
+
+.table_contact{
+    box-sizing: border-box;
+    width: 90%;
+    margin: 60px auto;
+    border-collapse: separate;
+    border-spacing: 0 30px;
+}
+
+.form_contact th{
+    width: 20%;
+}
+
+.form_contact td{
+    width: 70%;
+}
+
+input,textarea{
+    width: 100%;
+    border: 1px #96652B solid;
+}
+
+input{
+    height: 2rem;
+}
+
+@media screen and (max-width:1024px) {
+    
+    .section_contact p{
+    width: 80%;
+    margin: 50px auto 0;
+    }
+
+    .table_contact{
+        margin: 30px auto;
+    }
+    
+
+}
+
+@media screen and (max-width:600px) {
+
+    .table_contact{
+        margin: 0 auto;
+    }
+    
+    .section_contact p{
+        width: 100%;
+        margin-top: 30px;
+        font-size: 0.6em;
+    }
+    
+    .form_contact th,
+    .form_contact td{
+        display: block;
+        width: 100%;
+    }
+    
+    .form_contact th{
+        font-size: 0.7em;
+        text-align: left;
+        }
+    
+}
+
+/* ------- footer ------- */
+
+#footer{
+    text-align: center;
+    border-top: 2px #96652B solid;
+    background: #96652B;
+}
+
+#footer small{
+    display: block;
+    margin-top: 25px;
+    color: #fff;
+}
